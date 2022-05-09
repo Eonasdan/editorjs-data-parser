@@ -1,21 +1,16 @@
-<p align="center">
-  <img src="https://i.postimg.cc/hPPXmBFq/ejsp.png" width="256"/>
-</p>
-
 # EditorJs Data Parser
 
-## Easily convert json data from editorjs to html elements
-<br/>
+## Easily convert json data from editorjs to html elements.
 
 [![npm](https://img.shields.io/npm/v/editorjs-data-parser)](https://www.npmjs.com/package/editorjs-data-parser)
 [![npm](https://img.shields.io/npm/l/editorjs-data-parser)](https://www.npmjs.com/package/editorjs-data-parser)
 [![npm](https://img.shields.io/npm/dm/editorjs-data-parser)]()
 [![github](https://img.shields.io/github/stars/salimzade/editorjs-data-parser?style=social)](https://github.com/salimzade/editorjs-data-parser)
 
+This fork was made to work with my static blog engine and Bootstrap 5.
+
 # Installaton
  `npm i editorjs-data-parser`
- 
- `yarn add editorjs-data-parser`
 
 # Suppoted tools
 
@@ -95,7 +90,7 @@ const editor = new EditorJS({
 let btnConvert = document.getElementById("btnConvert");
 btnConvert.addEventListener("click", () => {
   editor.save().then((outputData) => {
-    let result = editorJsParser(outputData.blocks);
+    let result = eonasdan.parser(outputData.blocks);
     console.log(result);
   });
 });

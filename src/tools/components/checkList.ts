@@ -2,9 +2,9 @@ let value = '';
 export const checklist = (param: { checked: boolean; text: string }[]) => {
   value = '';
   param.forEach((items: { checked: boolean; text: string }) => {
-    value += `<div class="ejs-form-check"><input class="ejs-form-check__input" type="radio" name="ejsRadios" id="ejsRadio" value="option1" ${
+    value += `<div class="form-check"><input class="form-check-input" type="radio" ${
       items.checked ? 'checked' : ''
-    }><label class="ejs-form-check__label" for="ejsRadio">${
+    }><label class="form-check-label">${
       items.text
     }</label></div>`;
   });

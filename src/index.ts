@@ -70,4 +70,4 @@ const editorJsParser = (value: any[]) => {
   return editorData;
 };
 
-export { editorJsParser };
+export { editorJsParser as parser };

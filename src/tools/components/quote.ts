@@ -1,8 +1,11 @@
 export const quote = (caption: string, text: string) => {
-  let quoteValue = '';
-  quoteValue += `<blockquote class="ejs-blockquote">
-                    ${text}
-                    <footer class="ejs-blockquote__footer">${caption}</footer>
-                 </blockquote>`;
+  let quoteValue = `<blockquote class="blockquote">${text}`;
+
+  if(caption) {
+      quoteValue += `<footer class="blockquote-footer">${caption}</footer>`;
+  }
+
+    quoteValue += '</blockquote>';
+
   return quoteValue;
 };

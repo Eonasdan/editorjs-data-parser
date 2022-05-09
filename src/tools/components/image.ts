@@ -1,17 +1,28 @@
 interface ImgTypes {
-  stretched: boolean;
-  withBorder: boolean;
-  withBackground: boolean;
-  file: {
-    url: string;
-  };
-  caption: string;
+    stretched: boolean;
+    withBorder: boolean;
+    withBackground: boolean;
+    file: {
+        url: string;
+    };
+    caption: string;
+    alt: string;
+    srcSet: string;
 }
 
 export const image = (param: ImgTypes) => {
-  const imgParams = `${param.stretched ? 'ejs-img__fullwidth' : ''} ${
-    param.withBorder ? 'ejs-image__withBorder' : ''
-  } ${param.withBackground ? 'ejs-img__background' : ''}`;
+    if (param.srcSet) {
+        return param.srcSet;
+    }
 
-  return `<div class="${imgParams}"><img class="ejs-image" src="${param.file.url}" alt="${param.caption}"></div>`;
+    const imgClass = `${param.stretched ? 'img-fullwidth' : ''} ${
+        param.withBorder ? 'image-withBorder' : ''
+    } ${param.withBackground ? 'img-background' : ''}`;
+
+
+    if (param.caption) {
+        return `<figure><img src="${param.file.url}" class="${imgClass}" alt="${param.alt}"><figcaption>${param.caption}</figcaption></figure>`
+    }
+
+    return `<img src="${param.file.url}" class="${imgClass}" alt="${param.alt}">`
 };

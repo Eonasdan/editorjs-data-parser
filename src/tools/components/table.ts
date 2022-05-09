@@ -1,7 +1,6 @@
 export const table = (params: { data: { content: string[][] } }) => {
   let tableHeader = '';
   let tableBody = '';
-  let template = '';
 
   params.data.content[0].forEach((header: string) => {
     tableHeader += `<th>${header}</th>`;
@@ -16,18 +15,16 @@ export const table = (params: { data: { content: string[][] } }) => {
     tableBody += `</tr>`;
   }
 
-  template = `
-    <table class='ejs-table'>
-        <thead class='ejs-table__thead'>
+  return `
+    <table class='table'>
+        <thead>
             <tr>
                 ${tableHeader}
             <tr>
         </thead>
-        <tbody class="ejs-table__body">
+        <tbody>
             ${tableBody}
         </tbody>
     </table>
   `;
-
-  return template;
 };

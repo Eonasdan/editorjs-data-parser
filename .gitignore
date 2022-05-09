@@ -17,3 +17,5 @@ node_modules
 # Dist folder
 .DS_Store
 dist/
+
+.idea
