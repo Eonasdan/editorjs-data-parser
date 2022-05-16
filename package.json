@@ -1,6 +1,6 @@
 {
-  "name": "eonadan-editorjs-parser",
-  "version": "1.0.0",
+  "name": "@eonadan/editorjs-parser",
+  "version": "1.0.1",
   "description": "Easily convert json data from editorjs to html elements",
   "source": "src/index.ts",
   "main": "dist/bundle.js",
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/Eonasdan/editorjs-data-parser.git"
   },
-  "author": "teymur.salimzade@gmail.com",
+  "author": "Jonathan Peterson",
   "license": "MIT",
   "private": false,
   "scripts": {
