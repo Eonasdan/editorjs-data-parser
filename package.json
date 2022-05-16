@@ -11,7 +11,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/salimzade/editorjs-data-parser.git"
+    "url": "git+https://github.com/Eonasdan/editorjs-data-parser.git"
   },
   "author": "teymur.salimzade@gmail.com",
   "license": "MIT",
