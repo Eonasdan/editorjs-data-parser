@@ -1,5 +1,5 @@
 {
-  "name": "@eonadan/editorjs-parser",
+  "name": "@eonasdan/editorjs-parser",
   "version": "1.0.1",
   "description": "Easily convert json data from editorjs to html elements",
   "source": "src/index.ts",
