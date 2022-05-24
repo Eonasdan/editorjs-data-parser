@@ -7,12 +7,12 @@ interface ImgTypes {
     };
     caption: string;
     alt: string;
-    srcSet: string;
+    pictureSet: string;
 }
 
 export const image = (param: ImgTypes) => {
-    if (param.srcSet) {
-        return param.srcSet;
+    if (param.pictureSet) {
+        return param.pictureSet;
     }
 
     const imgClass = `${param.stretched ? 'img-fullwidth' : ''} ${
